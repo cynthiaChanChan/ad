@@ -1,0 +1,9 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.board {
+    padding-top: rem(60);
+
+    & > .container {
+        max-width: $forms-container;
+    }
+}

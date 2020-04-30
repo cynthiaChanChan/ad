@@ -1,0 +1,111 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    padding: rem(80) 20px;
+
+    @include respond("small") {
+        flex-direction: column;
+        background-position: bottom left;
+    }
+
+    & > * {
+        margin: 0 rem(50);
+        @include respond("extra-large") {
+            margin: 0 rem(30);
+        }
+
+        @include respond("medium") {
+            margin: 0 20px;
+        }
+    }
+}
+
+.productImg {
+    max-width: rem(550);
+    @include respond("extra-large") {
+        max-width: 40%;
+    }
+    @media only screen and (max-width: 41.25em) {
+        max-width: 35%;
+    }
+    @include respond("small") {
+        margin-bottom: 3rem;
+        max-width: 80%;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+.content {
+    padding-left: 20px;
+    @include respond("medium") {
+        padding-left: 0;
+    }
+}
+
+.list {
+    color: $color-text;
+    font-size: rem(32);
+    line-height: 1.5;
+    margin-top: 18px;
+
+    @include respond("extra-large") {
+        font-size: rem(25);
+    }
+
+    @include respond("medium") {
+        font-size: rem(21);
+    }
+}
+
+.subContent {
+    color: $color-text-2;
+    font-size: rem(19);
+    display: flex;
+    margin-top: 2.2rem;
+
+    @include respond("extra-large") {
+        font-size: 14px;
+        margin-left: -20px;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        .item {
+            padding: 0 rem(20);
+
+            @include respond("medium") {
+                padding: 0 10px;
+            }
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 80%;
+            background-color: currentColor;
+        }
+        &:last-child::after {
+            display: none;
+        }
+    }
+}
+.icon {
+    height: rem(43);
+    margin-bottom: 5px;
+    @include respond("medium") {
+        height: rem(33);
+    }
+    img {
+        height: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+}

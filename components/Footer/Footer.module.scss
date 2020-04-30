@@ -1,0 +1,86 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.footer .content {
+    font-size: 13px;
+    color: $color-secondary-3;
+    line-height: 1.7;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 78.75rem;
+
+    @media only screen and (max-width: 68.75em) {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    @include respond("small") {
+        justify-content: space-between;
+        padding: rem(25) 20px;
+    }
+
+    h6 {
+        font-size: rem(24);
+        color: $color-black-2;
+        padding-bottom: 14px;
+        line-height: 1;
+    }
+}
+
+.item {
+    max-width: rem(400);
+    padding: rem(45);
+
+    @include respond("extra-large") {
+        padding: rem(45) rem(20);
+    }
+    @include respond("large") {
+        width: 50%;
+        padding: rem(45);
+    }
+
+    @include respond("medium") {
+        max-width: unset;
+        padding: rem(45) rem(20);
+    }
+
+    @include respond("small") {
+        width: unset;
+        padding: rem(20);
+    }
+}
+
+.links {
+    a:hover {
+        color: $color-primary;
+    }
+}
+
+.qrcode {
+    width: 104px;
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.copyright {
+    background-color: $color-secondary-2;
+    padding: rem(30) 20px;
+    font-size: 16px;
+    text-align: center;
+    @include respond("medium") {
+        font-size: rem(16);
+    }
+    @include respond("small") {
+        text-align: center;
+        line-height: 2;
+    }
+}
+
+.copyright span {
+    margin-right: rem(46);
+    @include respond("small") {
+        display: block;
+    }
+}

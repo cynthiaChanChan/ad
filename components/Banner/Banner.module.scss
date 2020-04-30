@@ -1,0 +1,121 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.banner {
+    text-align: center;
+    padding: rem(300) 0 rem(100);
+    background: bottom / cover url("/banner.jpg");
+    color: $color-white;
+    @include respond("large") {
+        padding: rem(200) 0 rem(100);
+    }
+    @include respond("extra-small") {
+        padding: rem(160) 0 rem(60);
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.sub_heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include set-font(rem(64), 700, null, 1, rem(27));
+    text-shadow: 0px 3px 2px rgba(21, 21, 25, 0.87);
+    @include respond("extra-large") {
+        font-size: rem(54);
+    }
+    @include respond("large") {
+        font-size: rem(40);
+    }
+    @include respond("medium") {
+        font-size: rem(30);
+        letter-spacing: rem(15);
+    }
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: rem(76);
+        background-color: $color-white-2;
+        box-shadow: 0px 3px 2px rgba(21, 21, 25, 0.87);
+        @include respond("large") {
+            width: rem(46);
+        }
+        @include respond("medium") {
+            height: 2px;
+        }
+    }
+    &::before {
+        margin-right: rem(18);
+    }
+    &::after {
+        margin-left: rem(-8);
+        @include respond("medium") {
+            margin-left: 0;
+        }
+    }
+}
+
+.heading {
+    @include set-font(rem(80), 900, null, 1, rem(16));
+    margin: rem(46) 0 rem(70);
+    text-shadow: 0px 3px 2px rgba(21, 21, 25, 0.87);
+    @include respond("extra-large") {
+        font-size: rem(60);
+    }
+    @include respond("large") {
+        font-size: rem(46);
+        margin: rem(30) 0 rem(50);
+    }
+    @include respond("medium") {
+        font-size: rem(36);
+        letter-spacing: rem(8);
+    }
+    @include respond("extra-small") {
+        font-size: rem(32);
+        letter-spacing: rem(4);
+        margin: rem(20) 0 rem(40);
+    }
+}
+
+.list {
+    @include set-font(rem(24), null, null, 1.2, rem(4.8));
+    display: flex;
+    justify-content: space-evenly;
+    width: 76%;
+    padding: rem(50) 0;
+    background-color: rgba($color-primary, 0.7);
+    @include respond("medium") {
+        padding: rem(26) 0;
+        font-size: rem(16);
+        letter-spacing: rem(2);
+    }
+    @include respond("small") {
+        width: 90%;
+    }
+    @include respond("extra-small") {
+        padding: rem(16) 0;
+        width: 96%;
+    }
+    & span:first-child {
+        @include set-font(rem(64), 700);
+        display: block;
+        letter-spacing: 0;
+        @include respond("extra-large") {
+            font-size: rem(54);
+        }
+        @include respond("large") {
+            font-size: rem(40);
+        }
+        @include respond("medium") {
+            font-size: rem(30);
+        }
+        @include respond("extra-small") {
+            font-size: rem(22);
+        }
+    }
+}

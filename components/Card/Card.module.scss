@@ -1,0 +1,55 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.card {
+    @include center-by-flex;
+    flex-direction: column;
+    width: 18%;
+    min-width: rem(150);
+    padding: rem(35) 0 rem(40);
+    background-color: rgba($color-black, 0.6);
+    border-radius: 10px;
+
+    @include respond("extra-large") {
+        padding: rem(25) 0;
+    }
+
+    @media only screen and (max-width: 44em) {
+        width: 27.333%;
+    }
+
+    @include respond("extra-small") {
+        width: 40%;
+        padding: rem(20) 0;
+    }
+}
+
+.imgBox {
+    height: rem(53);
+    @media only screen and (max-width: 81.25em) {
+        height: rem(43);
+    }
+
+    img {
+        display: block;
+        height: 100%;
+    }
+}
+
+.line {
+    height: 2px;
+    width: rem(102);
+    margin: rem(12) 0 rem(15);
+    background-color: $color-primary;
+}
+
+.heading {
+    font-size: rem(24);
+    font-weight: 500;
+    @media only screen and (max-width: 81.25em) {
+        font-size: rem(21);
+    }
+
+    @media only screen and (max-width: 65.62em) {
+        font-size: rem(16);
+    }
+}

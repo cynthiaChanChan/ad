@@ -1,0 +1,62 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.wrapper {
+    display: inline-block;
+
+    &.border {
+        padding-left: rem(25);
+        position: relative;
+        @include respond("small") {
+            padding-left: rem(18);
+        }
+        &::before {
+            content: "";
+            display: block;
+            background-color: $color-primary;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 85%;
+            width: rem(8);
+        }
+    }
+}
+
+.heading {
+    font-weight: 700;
+    font-size: rem(53);
+    color: $color-primary;
+    letter-spacing: 10px;
+    @include respond("extra-large") {
+        font-size: rem(40);
+    }
+
+    @include respond("medium") {
+        font-size: rem(30);
+    }
+}
+
+.sub_heading {
+    font-size: rem(53);
+    font-weight: 500;
+    color: $color-black-2;
+    margin-top: 5px;
+    @include respond("extra-large") {
+        font-size: rem(40);
+    }
+
+    @include respond("medium") {
+        font-size: rem(30);
+    }
+}
+
+.small {
+    .heading {
+        @include set-font(rem(32), 400, null, null, rem(6.4));
+    }
+
+    .sub_heading {
+        @include set-font(rem(40), 700, $color-black-3, null, 2px);
+    }
+}

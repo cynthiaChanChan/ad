@@ -1,0 +1,179 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.header {
+    background-color: $color-white;
+    color: $color-black-2;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 rem(82) 0 rem(82);
+        height: rem(137);
+        z-index: 1;
+        @media only screen and (max-width: 67.5em) {
+            padding: 0 rem(22);
+        }
+        @include respond("large") {
+            height: rem(100);
+        }
+    }
+}
+
+.logo {
+    display: block;
+    height: 100%;
+    padding: rem(19) 0 rem(14);
+    @include respond("large") {
+        padding: 12px 10px 12px 0;
+    }
+    img {
+        display: block;
+        height: 100%;
+        width: auto;
+    }
+}
+
+.nav_button {
+    display: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+    cursor: pointer;
+    position: relative;
+    @include respond("medium") {
+        display: block;
+        justify-self: flex-end;
+        align-self: center;
+    }
+}
+
+.nav_icon,
+.nav_icon::before,
+.nav_icon::after {
+    width: 100%;
+    height: 3px;
+    background-color: $color-primary;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.nav_icon {
+    @include center-by-absolute;
+}
+
+.nav_icon::before,
+.nav_icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+}
+
+.nav_icon::before {
+    top: -8px;
+}
+
+.nav_icon::after {
+    top: 8px;
+}
+
+.expand {
+    .nav_icon {
+        background-color: transparent;
+    }
+    .nav_icon::before {
+        transform: rotate(135deg);
+        top: 0;
+    }
+    .nav_icon::after {
+        transform: rotate(-135deg);
+        top: 0;
+    }
+}
+
+.nav_list {
+    display: flex;
+    align-self: center;
+    font-size: rem(21);
+    font-weight: 400;
+    @include respond("large") {
+        font-size: rem(18);
+    }
+    @include respond("medium") {
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        background-color: $color-white;
+        position: absolute;
+        left: 0;
+        top: rem(99);
+        padding-top: 14rem;
+        z-index: 2;
+        font-size: rem(26);
+        color: $color-secondary;
+        transform: translateX(-102%);
+        transition: transform 1s;
+        backface-visibility: hidden;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    }
+    @include respond("small") {
+        font-size: rem(26);
+        padding-top: 10rem;
+    }
+    @media only screen and (max-width: 25em) {
+        padding-top: 8rem;
+    }
+    li {
+        margin-left: rem(5);
+        padding: rem(17) rem(20) rem(19);
+        min-width: rem(134);
+        text-align: center;
+        border-radius: 28px;
+        line-height: 1;
+        letter-spacing: 2px;
+        @include respond("large") {
+            padding: rem(10) rem(10) rem(12);
+            min-width: rem(104);
+            letter-spacing: 1px;
+        }
+        @include respond("medium") {
+            margin: rem(24);
+            text-align: center;
+            display: block;
+            padding: 10px;
+            height: auto;
+        }
+        @include respond("small") {
+            margin: rem(12);
+        }
+        & a {
+            position: relative;
+            @include respond("large") {
+                align-self: center;
+            }
+        }
+        & a::after {
+            @include underline;
+            margin-top: 5px;
+        }
+
+        &:hover {
+            color: $color-primary;
+            & a::after {
+                width: 100%;
+                left: 0;
+            }
+        }
+        &.active {
+            color: $color-white;
+            background-color: $color-primary;
+            @include respond("medium") {
+                color: $color-primary;
+                background-color: $color-white;
+            }
+        }
+    }
+}
+
+.open {
+    transform: translateX(0);
+}
