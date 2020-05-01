@@ -1,0 +1,95 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.media {
+    background-color: $color-grey-3;
+    padding: rem(49) 0 rem(46);
+    text-align: center;
+}
+
+.imgBox {
+    position: relative;
+    width: 75%;
+    margin: rem(42) auto rem(52);
+    @include respond("medium") {
+        width: 90%;
+    }
+    @include respond("small") {
+        width: 96%;
+        margin: rem(32) auto rem(32);
+    }
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.content_wrapper {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    div {
+        margin-left: rem(5);
+        height: rem(154);
+        background-color: rgba($color-primary, 0.6);
+        @include respond("large") {
+            height: rem(88);
+        }
+        @include respond("small") {
+            height: rem(58);
+        }
+    }
+    div:first-child {
+        width: rem(8);
+        @include respond("large") {
+            width: rem(5);
+        }
+    }
+    div:nth-child(2) {
+        width: rem(16);
+        @include respond("large") {
+            width: rem(8);
+        }
+    }
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    @include set-font(rem(40), 700, $color-white, null, 2px);
+    padding: 0 rem(50);
+    @include respond("large") {
+        font-size: rem(26);
+        padding: 0 rem(20);
+    }
+    @include respond("small") {
+        font-size: rem(18);
+    }
+}
+
+.media_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    @media only screen and (max-width: 81.25em) {
+        width: 80%;
+    }
+    @include respond("large") {
+        width: 90%;
+    }
+    @include respond("medium") {
+        width: 100%;
+    }
+
+    & > * {
+        margin: 0 rem(18) rem(20);
+        @media only screen and (max-width: 81.25em) {
+            margin: 0 rem(50) rem(20);
+        }
+        @include respond("medium") {
+            margin: 0 rem(18) rem(20);
+        }
+    }
+}

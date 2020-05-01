@@ -1,9 +1,54 @@
 @import "../../sass/abstracts/abstracts.scss";
 
-.board {
+.wifi {
     padding-top: rem(60);
 
     & > .container {
         max-width: $forms-container;
+    }
+}
+
+.card {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: rem(110) 20px rem(97);
+        max-width: $forms-container;
+
+        & > * {
+            margin: 0 rem(55);
+        }
+    }
+}
+
+.productImg {
+    max-width: rem(435);
+    img {
+        width: 100%;
+    }
+}
+
+.wifiInfo {
+    max-width: rem(582);
+    @include set-font(rem(32), 500, $color-black-2);
+    li {
+        display: flex;
+
+        :first-child {
+            flex-shrink: 0;
+        }
+
+        :nth-child(2) {
+            padding-top: rem(5);
+        }
+    }
+    .highlight {
+        color: $color-primary;
+        font-size: rem(40);
+    }
+
+    .newLine {
+        display: block;
     }
 }

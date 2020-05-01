@@ -1,0 +1,41 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.advantage {
+    display: flex;
+}
+
+.iconBox {
+    width: rem(72);
+    @include respond("medium") {
+        width: rem(36);
+    }
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.contentBox {
+    padding: 0 rem(35);
+    text-align: left;
+    @include respond("medium") {
+        padding: 0 rem(20);
+    }
+}
+
+.heading {
+    @include set-font(rem(24), 500, $color-primary, 1);
+    @include respond("medium") {
+        font-size: rem(18);
+    }
+}
+
+.paragraph {
+    font-size: rem(19);
+    margin-top: rem(16);
+    max-width: rem(304);
+    @include respond("medium") {
+        font-size: rem(16);
+        margin-top: rem(10);
+    }
+}

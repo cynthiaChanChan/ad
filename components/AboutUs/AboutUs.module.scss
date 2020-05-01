@@ -1,0 +1,37 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.banner {
+    background-color: $color-primary;
+    padding: rem(58) 20px;
+    text-align: center;
+    @include set-font(rem(24), null, $color-white);
+    @include respond("medium") {
+        font-size: rem(20);
+    }
+    p:last-child {
+        margin: 0 auto;
+        max-width: rem(980);
+    }
+}
+
+.sub_heading {
+    font-size: rem(32);
+    letter-spacing: rem(6.4);
+    @include respond("medium") {
+        font-size: rem(26);
+    }
+}
+
+.heading {
+    @include set-font(rem(64), 900, null, null, 3px);
+    @include respond("medium") {
+        font-size: rem(36);
+    }
+}
+
+.content {
+    margin: rem(35);
+    @include respond("medium") {
+        margin: rem(18);
+    }
+}

@@ -1,5 +1,9 @@
 @import "../../sass/abstracts/abstracts.scss";
 
+.footer {
+    background: center / cover url("/footer.jpg");
+}
+
 .footer .content {
     font-size: 13px;
     color: $color-secondary-3;

@@ -1,31 +1,37 @@
 export const sectionHeading = {
-    title: "学车平台",
-    subTitle: "汽车广告展示",
+    title: "Wi-Fi  页面广告",
+    subTitle: "呈现形式",
 };
 
 export type WifiData = {
     title: string;
     content: string;
     img: string;
+    isImgSmall?: boolean;
 };
 
 const wifiListData: WifiData[] = [
     {
-        title: "3号学车驾校",
-        content:
-            "3号学车是驾悦集团旗下的一个驾校招生平台,驾校通过率高，学员零投诉，也因其优质的贴心服务，深受学员好评。",
-        img: "./fly.png",
+        title: "连接网络",
+        content: "通过手机，连接对应</br>Wi-Fi进入引导页面",
+        img: "./wifi_connects.png",
+        isImgSmall: true,
     },
     {
-        title: "3号学车平台",
-        content:
-            "自2014年以来持续为驾校提供招生服务，在招生板块力求创新，深受业内驾培人士的青睐",
-        img: "./platform.png",
+        title: "引导页",
+        content: "连接Wi-Fi进入引导页</br>观看十秒广告即可认证上网",
+        img: "./wifi_guide.png",
     },
     {
-        title: "3号学车网站",
-        content: "网站集合了全国各地区的驾校和学车学员，具有明显的广告效果",
-        img: "./homepage.png",
+        title: "认证首页",
+        content: "输入手机号码</br>认证后即可免费上网",
+        img: "./wifi_login.png",
+    },
+    {
+        title: "成功上网",
+        content: "通过认证后即可成功免费上网",
+        img: "./wifi.png",
+        isImgSmall: true,
     },
 ];
 

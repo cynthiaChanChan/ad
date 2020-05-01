@@ -1,0 +1,98 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.marketing {
+    padding-top: rem(60);
+
+    & > .container {
+        max-width: $forms-container;
+    }
+}
+
+.scheduleList {
+    @include set-font(rem(27), 500, $color-black-2);
+    & > .container {
+        max-width: $forms-container;
+        padding: rem(195) rem(65) rem(90);
+    }
+}
+
+.detail {
+    display: flex;
+    img {
+        height: rem(30);
+        margin-left: rem(11);
+    }
+}
+
+.sechedule {
+    display: inline-block;
+
+    & > * {
+        margin: 0 rem(8);
+    }
+
+    &:nth-of-type(2) {
+        transform: translateY(-5rem);
+    }
+
+    &:nth-of-type(3) {
+        transform: translateY(-10rem);
+    }
+
+    h3 {
+        text-align: right;
+        @include set-font(rem(53), 700, $color-primary, null, 4px);
+        padding-right: rem(43);
+        margin-bottom: rem(22);
+
+        svg {
+            width: rem(50);
+            margin-left: rem(15);
+            fill: $color-primary;
+            transform: translateY(rem(3));
+        }
+    }
+
+    .detailContent {
+        p {
+            margin-left: -1.7rem;
+        }
+        border: rem(30) solid $color-primary;
+        padding: rem(15) 0 rem(15) rem(37);
+        border-right: none;
+        border-bottom: none;
+        max-width: rem(365);
+    }
+    &:nth-of-type(even) {
+        h3 {
+            color: $color-black-2;
+
+            svg {
+                fill: $color-black-2;
+            }
+        }
+
+        .detailContent {
+            border-color: $color-black-2;
+
+            ol {
+                margin-bottom: -5rem;
+            }
+        }
+    }
+
+    &:last-of-type {
+        h3 {
+            padding-right: 0;
+        }
+        .detail img {
+            display: none;
+        }
+
+        .detailContent {
+            ol {
+                margin-bottom: -2.2rem;
+            }
+        }
+    }
+}

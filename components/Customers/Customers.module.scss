@@ -1,0 +1,35 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.customers {
+    padding: rem(52) 0 rem(65);
+    background-color: $color-grey-3;
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: rem(26);
+    width: 100%;
+    & > * {
+        margin: 3px;
+        @include respond("small") {
+            margin: 2px;
+        }
+    }
+}
+
+.icon {
+    width: rem(174);
+    @media only screen and (max-width: 82.5em) {
+        width: 13%;
+    }
+    @include respond("small") {
+        width: 23%;
+    }
+    img {
+        display: block;
+        width: 100%;
+    }
+}

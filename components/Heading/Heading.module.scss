@@ -54,9 +54,17 @@
 .small {
     .heading {
         @include set-font(rem(32), 400, null, null, rem(6.4));
+        padding-left: rem(6.4);
+        @include respond("medium") {
+            font-size: rem(26);
+        }
     }
 
     .sub_heading {
         @include set-font(rem(40), 700, $color-black-3, null, 2px);
+        @include respond("medium") {
+            font-size: rem(28);
+            letter-spacing: 0;
+        }
     }
 }

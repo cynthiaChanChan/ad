@@ -5,18 +5,24 @@ type WifiCardProps = {
     product: WifiData;
 };
 
-const WifiCard = ({ product: { title, content, img } }: WifiCardProps) => {
+const WifiCard = ({
+    product: { title, content, img, isImgSmall },
+}: WifiCardProps) => {
     return (
         <div className={styles.box}>
             <div className={`${styles.container} container`}>
-                <div className={styles.productImg}>
+                <div
+                    className={`${styles.productImg} ${
+                        isImgSmall ? styles.small : ""
+                    }`}
+                >
                     <img src={img} alt="product image" />
                 </div>
                 <div className={styles.content}>
                     <h3>
                         <span>{title}</span>
                     </h3>
-                    <p>{content}</p>
+                    <p dangerouslySetInnerHTML={{ __html: content }}></p>
                 </div>
             </div>
         </div>

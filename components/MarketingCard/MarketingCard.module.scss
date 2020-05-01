@@ -1,0 +1,62 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.box {
+    background-color: $color-white;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: rem(60) 20px;
+        max-width: $forms-container;
+
+        & > * {
+            margin: 0 rem(42);
+        }
+    }
+    &:nth-of-type(odd) {
+        background-color: #f5f4f4;
+
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+.productImg {
+    flex: 1;
+
+    img {
+        width: 100%;
+    }
+}
+
+.content {
+    h3 {
+        letter-spacing: 3px;
+    }
+}
+
+.list {
+    @include set-font(rem(32), $color-black-2, 500);
+    li {
+        display: flex;
+        margin-top: rem(15);
+        align-items: flex-start;
+        & > :first-child {
+            display: block;
+            &::before {
+                content: "";
+                display: inline-block;
+                background-color: $color-primary;
+                width: 3px;
+                height: 2rem;
+                margin-right: rem(15);
+                transform: translateY(10%);
+            }
+        }
+        .highlight {
+            color: $color-primary;
+        }
+    }
+}
