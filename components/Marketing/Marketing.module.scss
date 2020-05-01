@@ -6,14 +6,19 @@
     & > .container {
         max-width: $forms-container;
     }
+    .schedules {
+        @include set-font(rem(27), 500, $color-black-2);
+        padding: rem(195) rem(45) rem(90);
+
+        @media only screen and (max-width: 83.15em) {
+            font-size: rem(20);
+        }
+    }
 }
 
 .scheduleList {
-    @include set-font(rem(27), 500, $color-black-2);
-    & > .container {
-        max-width: $forms-container;
-        padding: rem(195) rem(65) rem(90);
-    }
+    display: flex;
+    padding: 0 rem(50);
 }
 
 .detail {
@@ -25,8 +30,7 @@
 }
 
 .sechedule {
-    display: inline-block;
-
+    width: 33.333%;
     & > * {
         margin: 0 rem(8);
     }
@@ -61,7 +65,6 @@
         padding: rem(15) 0 rem(15) rem(37);
         border-right: none;
         border-bottom: none;
-        max-width: rem(365);
     }
     &:nth-of-type(even) {
         h3 {
@@ -77,6 +80,10 @@
 
             ol {
                 margin-bottom: -5rem;
+
+                @media only screen and (max-width: 83.15em) {
+                    margin-bottom: 0;
+                }
             }
         }
     }
@@ -92,7 +99,42 @@
         .detailContent {
             ol {
                 margin-bottom: -2.2rem;
+
+                @media only screen and (max-width: 83.15em) {
+                    margin-bottom: 0;
+                }
             }
+        }
+    }
+}
+
+.box {
+    background-color: #f5f4f4;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: rem(60) 20px;
+        max-width: $forms-container;
+
+        & > * {
+            margin: 0 rem(42);
+        }
+    }
+
+    .productImg {
+        max-width: 43%;
+        img {
+            width: 100%;
+        }
+    }
+
+    .content {
+        flex: 1;
+        padding-left: rem(100);
+        h3 {
+            letter-spacing: 3px;
         }
     }
 }

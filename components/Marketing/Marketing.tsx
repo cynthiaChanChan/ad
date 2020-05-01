@@ -8,7 +8,7 @@ import marketingListData, {
 } from "./Marketing.data";
 
 import styles from "./Marketing.module.scss";
-import { platform } from "os";
+import Table from "../Table/Table";
 
 type BoardProps = {
     pageHeading: string;
@@ -62,8 +62,8 @@ const Marketing = ({ pageHeading }: BoardProps) => {
                     className={pageHeading}
                 />
             </div>
-            <div className={styles.scheduleList}>
-                <ul className={`${styles.container} container`}>
+            <div className={`${styles.schedules} container`}>
+                <ul className={styles.scheduleList}>
                     {secheduleListData.map(
                         (sechedule, index): React.ReactNode => (
                             <Schedule sechedule={sechedule} key={index} />
@@ -76,6 +76,20 @@ const Marketing = ({ pageHeading }: BoardProps) => {
                     <MarketingCard product={item} key={index} />
                 )
             )}
+            <div className={styles.box}>
+                <div className={`${styles.container} container`}>
+                    <div className={styles.productImg}>
+                        <img src="marketing_detail.png" alt="product image" />
+                    </div>
+                    <div className={styles.content}>
+                        <Heading
+                            heading={{ title: "活动环节", subTitle: "" }}
+                            attribute="border"
+                        />
+                        <Table />
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

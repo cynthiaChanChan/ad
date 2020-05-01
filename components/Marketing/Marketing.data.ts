@@ -58,13 +58,6 @@ const marketingListData: MarketingData[] = [
         ],
         img: "./marketing_live.png",
     },
-    {
-        heading: {
-            title: "活动环节",
-            subTitle: "",
-        },
-        img: "./marketing_detail.png",
-    },
 ];
 
 export type SecheuleData = {

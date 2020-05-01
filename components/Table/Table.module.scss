@@ -1,0 +1,31 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.table {
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    background-color: #f2f2f2;
+    margin-top: rem(12);
+
+    *,
+    th,
+    td {
+        padding: 5px;
+        border: 1px solid #000;
+        text-align: center;
+        font-size: rem(14);
+    }
+
+    th {
+        background-color: $color-primary;
+        @include set-font(rem(19), 700, $color-white, 1.6);
+    }
+
+    .heading {
+        background-color: $color-grey;
+    }
+
+    tbody td {
+        padding: rem(10) rem(9);
+    }
+}
