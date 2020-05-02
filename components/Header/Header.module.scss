@@ -3,6 +3,12 @@
 .header {
     background-color: $color-white;
     color: $color-black-2;
+    @include respond("medium") {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        box-shadow: 0 2px 3px 0 rgba($color-black, 0.1);
+    }
     .container {
         display: flex;
         justify-content: space-between;

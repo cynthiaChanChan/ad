@@ -3,11 +3,23 @@
 .pageHeading {
     margin-left: rem(42);
 
+    @include respond("large") {
+        margin-left: rem(30);
+    }
+
+    @include respond("medium") {
+        margin-left: 0;
+    }
+
     h3 {
         letter-spacing: 3px;
     }
 
     h2 {
         font-size: rem(40);
+
+        @include respond("medium") {
+            font-size: rem(30);
+        }
     }
 }

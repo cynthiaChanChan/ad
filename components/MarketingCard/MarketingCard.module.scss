@@ -10,8 +10,30 @@
         padding: rem(60) 20px;
         max-width: $forms-container;
 
+        @include respond("medium") {
+            padding: rem(60) 0;
+        }
+
+        @media only screen and (max-width: 41.25em) {
+            flex-direction: column;
+            padding: rem(60) 20px;
+            align-items: flex-start;
+        }
+
         & > * {
             margin: 0 rem(50);
+
+            @include respond("large") {
+                margin: 0 rem(30);
+            }
+
+            @include respond("medium") {
+                margin: 0 20px;
+            }
+
+            @media only screen and (max-width: 41.25em) {
+                margin: 0;
+            }
         }
     }
     &:nth-of-type(odd) {
@@ -19,15 +41,26 @@
 
         .container {
             flex-direction: row-reverse;
+
+            @media only screen and (max-width: 41.25em) {
+                flex-direction: column;
+            }
         }
     }
-}
+    .productImg {
+        max-width: 53.5%;
 
-.productImg {
-    max-width: 53.5%;
+        @media only screen and (max-width: 41.25em) {
+            max-width: 100%;
+        }
 
-    img {
-        width: 100%;
+        @media only screen and (max-width: 41.25em) {
+            margin-top: 2rem;
+        }
+
+        img {
+            width: 100%;
+        }
     }
 }
 
@@ -42,6 +75,12 @@
 
 .list {
     @include set-font(rem(32), $color-black-2, 500);
+    @include respond("extra-large") {
+        font-size: rem(26);
+    }
+    @include respond("large") {
+        font-size: rem(21);
+    }
     li {
         display: flex;
         margin-top: rem(15);
@@ -56,6 +95,12 @@
                 height: 2rem;
                 margin-right: rem(15);
                 transform: translateY(10%);
+                @include respond("extra-large") {
+                    height: 1.8rem;
+                }
+                @include respond("large") {
+                    height: 1.2rem;
+                }
             }
         }
         .highlight {

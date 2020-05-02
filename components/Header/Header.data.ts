@@ -6,23 +6,23 @@ type NavItem = {
 const navList: NavItem[] = [
     {
         content: "服务优势",
-        url: "/",
+        url: "/#advantages",
     },
     {
         content: "投放形式",
-        url: "/delivery",
+        url: "/forms",
     },
     {
         content: "经典案例",
-        url: "/cases",
+        url: "/examples",
     },
     {
         content: "合作客户",
-        url: "/",
+        url: "/#customers",
     },
     {
         content: "联系我们",
-        url: "/",
+        url: "/#contact",
     },
 ];
 

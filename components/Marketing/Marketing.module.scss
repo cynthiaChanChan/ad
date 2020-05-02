@@ -8,17 +8,41 @@
     }
     .schedules {
         @include set-font(rem(27), 500, $color-black-2);
-        padding: rem(195) rem(45) rem(90);
+        padding: rem(195) rem(70) rem(90);
 
-        @media only screen and (max-width: 83.15em) {
-            font-size: rem(20);
+        @media only screen and (max-width: 90em) {
+            padding: rem(195) rem(45) rem(90);
+            font-size: rem(21);
+        }
+
+        @include respond("extra-large") {
+            padding: rem(175) 0 rem(30);
+        }
+
+        @include respond("large") {
+            font-size: rem(16);
+        }
+
+        @include respond("small") {
+            padding-top: rem(60);
+            font-size: rem(18);
         }
     }
 }
 
 .scheduleList {
     display: flex;
+    justify-content: center;
     padding: 0 rem(50);
+
+    @include respond("medium") {
+        padding: 0 10px;
+    }
+
+    @include respond("small") {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .detail {
@@ -26,45 +50,116 @@
     img {
         height: rem(30);
         margin-left: rem(11);
+
+        @include respond("extra-large") {
+            height: rem(25);
+        }
+
+        @include respond("large") {
+            height: rem(20);
+        }
     }
 }
 
 .sechedule {
-    width: 33.333%;
+    width: 33.3333%;
+
+    @include respond("small") {
+        width: rem(330);
+        margin-bottom: 3rem;
+    }
     & > * {
-        margin: 0 rem(8);
+        padding: 0 rem(8);
+
+        @include respond("large") {
+            padding: 0 rem(5);
+        }
     }
 
     &:nth-of-type(2) {
         transform: translateY(-5rem);
+
+        @include respond("small") {
+            transform: translateY(0);
+        }
     }
 
     &:nth-of-type(3) {
         transform: translateY(-10rem);
+
+        @include respond("small") {
+            transform: translateY(0);
+        }
     }
 
     h3 {
         text-align: right;
         @include set-font(rem(53), 700, $color-primary, null, 4px);
-        padding-right: rem(43);
+        padding-right: rem(45);
         margin-bottom: rem(22);
+
+        @include respond("extra-large") {
+            font-size: rem(40);
+        }
+
+        @include respond("large") {
+            margin-bottom: rem(15);
+            padding-right: rem(35);
+        }
+
+        @include respond("medium") {
+            font-size: rem(30);
+        }
 
         svg {
             width: rem(50);
             margin-left: rem(15);
             fill: $color-primary;
             transform: translateY(rem(3));
+
+            @include respond("extra-large") {
+                width: rem(40);
+            }
+
+            @include respond("medium") {
+                width: rem(30);
+            }
         }
     }
 
     .detailContent {
         p {
             margin-left: -1.7rem;
+
+            @include respond("extra-large") {
+                margin-left: -1.5rem;
+            }
+
+            @include respond("large") {
+                margin-left: -1.2rem;
+            }
         }
         border: rem(30) solid $color-primary;
-        padding: rem(15) 0 rem(15) rem(37);
+        padding: rem(15) 0 rem(15) rem(42);
         border-right: none;
         border-bottom: none;
+
+        @include respond("extra-large") {
+            border-width: rem(25);
+            padding-left: rem(35);
+        }
+
+        @include respond("large") {
+            border-width: rem(20);
+        }
+
+        @include respond("medium") {
+            padding-left: rem(25);
+        }
+
+        @include respond("small") {
+            padding-left: rem(35);
+        }
     }
     &:nth-of-type(even) {
         h3 {
@@ -89,8 +184,11 @@
     }
 
     &:last-of-type {
+        @include respond("small") {
+            padding-right: rem(32);
+        }
         h3 {
-            padding-right: 0;
+            padding-right: rem(8);
         }
         .detail img {
             display: none;
@@ -118,21 +216,60 @@
         padding: rem(60) 20px;
         max-width: $forms-container;
 
+        @include respond("medium") {
+            justify-content: space-between;
+        }
+
+        @media only screen and (max-width: 41.25em) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
         & > * {
             margin: 0 rem(42);
+
+            @include respond("large") {
+                margin: 0 rem(30);
+            }
+
+            @include respond("medium") {
+                margin: 0;
+            }
         }
     }
 
     .productImg {
         max-width: 43%;
+        @include respond("extra-large") {
+            max-width: 40%;
+        }
+
+        @media only screen and (max-width: 41.25em) {
+            max-width: 100%;
+        }
+
+        @media only screen and (max-width: 41.25em) {
+            margin-top: 2rem;
+            order: 1;
+        }
         img {
             width: 100%;
         }
     }
 
     .content {
-        flex: 1;
         padding-left: rem(100);
+
+        @media only screen and (max-width: 90em) {
+            padding-left: rem(50);
+        }
+
+        @include respond("extra-large") {
+            padding-left: 0;
+        }
+
+        @include respond("medium") {
+        }
         h3 {
             letter-spacing: 3px;
         }

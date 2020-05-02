@@ -11,8 +11,8 @@ const FormsContainer = () => {
         <div className="forms">
             {/* <Board pageHeading={styles.pageHeading} /> */}
             {/* <Platform pageHeading={styles.pageHeading} /> */}
-            {/* <Wifi pageHeading={styles.pageHeading} /> */}
-            <Marketing pageHeading={styles.pageHeading} />
+            <Wifi pageHeading={styles.pageHeading} />
+            {/* <Marketing pageHeading={styles.pageHeading} /> */}
         </div>
     );
 };

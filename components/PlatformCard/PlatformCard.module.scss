@@ -10,8 +10,22 @@
         padding: rem(110) 20px;
         max-width: $forms-container;
 
+        @include respond("small") {
+            flex-direction: column;
+            align-items: center;
+            padding: rem(60) 20px;
+        }
+
         & > * {
             margin: 0 rem(42);
+
+            @include respond("medium") {
+                margin: 0 rem(20);
+
+                @include respond("small") {
+                    margin: 0;
+                }
+            }
         }
     }
     &:nth-of-type(odd) {
@@ -20,14 +34,23 @@
         .container {
             flex-direction: row-reverse;
             align-items: center;
+
+            @include respond("small") {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     }
-}
+    .productImg {
+        flex: 1;
+        img {
+            width: 100%;
+        }
 
-.productImg {
-    flex: 1;
-    img {
-        width: 100%;
+        @include respond("small") {
+            order: 1;
+            margin-top: 2rem;
+        }
     }
 }
 
@@ -35,13 +58,33 @@
     text-align: center;
     max-width: rem(470);
 
+    @include respond("extra-large") {
+        max-width: 40%;
+    }
+
+    @include respond("small") {
+        max-width: 80%;
+    }
+
     h3 {
         display: inline-block;
         @include set-font(rem(53), 700, $color-primary);
 
+        @include respond("extra-large") {
+            font-size: rem(40);
+        }
+
+        @include respond("medium") {
+            font-size: rem(30);
+        }
+
         span {
             display: inline-block;
             padding: 0 rem(60);
+
+            @include respond("medium") {
+                padding: 0 rem(40);
+            }
         }
 
         &::after {
@@ -56,5 +99,12 @@
     p {
         text-align: left;
         @include set-font(rem(32), 500, $color-black-2, 1.5);
+        @include respond("extra-large") {
+            font-size: rem(23);
+        }
+
+        @include respond("medium") {
+            font-size: rem(18);
+        }
     }
 }

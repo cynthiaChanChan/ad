@@ -10,8 +10,21 @@
         padding: rem(60) 20px;
         max-width: $forms-container;
 
+        @include respond("medium") {
+            padding: rem(60) 0;
+        }
+
+        @include respond("extra-small") {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
         & > * {
             margin: 0 rem(42);
+
+            @include respond("medium") {
+                margin: 0 20px;
+            }
         }
     }
     &:nth-of-type(odd) {
@@ -19,30 +32,69 @@
 
         .container {
             flex-direction: row-reverse;
+
+            @include respond("extra-small") {
+                flex-direction: column;
+            }
         }
 
         .content {
             width: rem(472);
+
+            @include respond("extra-large") {
+                width: 30%;
+            }
+
+            @include respond("extra-small") {
+                width: 40%;
+            }
         }
     }
 
     &:nth-of-type(even) {
         .content {
             text-align: right;
+
+            @include respond("extra-small") {
+                text-align: left;
+            }
         }
     }
 
     &:nth-of-type(2) {
         .content {
             max-width: rem(330);
+
+            @include respond("extra-small") {
+                width: 50%;
+            }
+
             h2 {
                 font-weight: 400;
                 font-size: rem(40);
                 line-height: 1.5;
                 margin-top: rem(15);
+
+                @include respond("extra-large") {
+                    font-size: rem(30);
+                    max-width: rem(250);
+                }
+
+                @include respond("medium") {
+                    font-size: rem(20);
+                    max-width: rem(190);
+                }
             }
             h3 {
                 font-size: rem(53);
+
+                @include respond("extra-large") {
+                    font-size: rem(40);
+                }
+
+                @include respond("medium") {
+                    font-size: rem(30);
+                }
             }
         }
 
@@ -50,25 +102,40 @@
             display: none;
         }
     }
-}
+    .productImg {
+        flex: 1;
 
-.productImg {
-    flex: 1;
+        @include respond("extra-small") {
+            margin-top: 2rem;
+        }
 
-    img {
-        width: 100%;
+        img {
+            width: 100%;
+        }
     }
 }
 
 .content {
     width: rem(433);
+    @include respond("extra-large") {
+        width: 30%;
+    }
+
+    @include respond("extra-small") {
+        order: -1;
+        width: 40%;
+    }
     &::after {
         content: "";
         display: block;
         background-color: $color-primary;
         width: 100%;
-        height: 8px;
+        height: rem(8);
         margin-top: rem(17);
+
+        @include respond("extra-small") {
+            margin-top: rem(12);
+        }
     }
 
     h2 {
@@ -76,10 +143,22 @@
         letter-spacing: 3px;
         line-height: 1.8;
         margin-top: 0;
+
+        @include respond("medium") {
+            font-size: rem(30);
+        }
     }
 
     h3 {
         font-size: rem(64);
         letter-spacing: 2px;
+
+        @include respond("extra-large") {
+            font-size: rem(40);
+        }
+
+        @include respond("medium") {
+            font-size: rem(30);
+        }
     }
 }

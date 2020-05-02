@@ -5,15 +5,20 @@
     border-collapse: collapse;
     border-spacing: 0px;
     background-color: #f2f2f2;
+    margin: 0;
     margin-top: rem(12);
 
     *,
     th,
     td {
-        padding: 5px;
+        padding: rem(5);
         border: 1px solid #000;
         text-align: center;
         font-size: rem(14);
+
+        @media only screen and (max-width: 54.4em) {
+            font-size: rem(12);
+        }
     }
 
     th {
@@ -27,5 +32,18 @@
 
     tbody td {
         padding: rem(10) rem(9);
+
+        @media only screen and (max-width: 54.4em) {
+            font-size: rem(12);
+            padding: rem(8) rem(3);
+        }
+
+        @media only screen and (max-width: 41.25em) {
+            padding: rem(10) rem(9);
+        }
+
+        @include respond("extra-small") {
+            padding: rem(8) rem(3);
+        }
     }
 }

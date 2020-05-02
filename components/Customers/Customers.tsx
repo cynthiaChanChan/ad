@@ -6,10 +6,9 @@ const Customers = () => {
     for (let i = 1; i <= 28; i++) {
         icons.push(`/client${i}.png`);
     }
-    console.log(icons);
     const heading = { title: "合作客户", subTitle: "Our customers" };
     return (
-        <section className={styles.customers}>
+        <section className={styles.customers} id="customers">
             <div className="container">
                 <Heading heading={heading} />
                 <ul className={styles.list}>

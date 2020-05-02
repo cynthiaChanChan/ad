@@ -6,7 +6,7 @@ import Advantage from "../Advantage/Advantage";
 const Advantages = () => {
     const heading = { title: "服务优势", subTitle: "Service advantages" };
     return (
-        <section className={styles.advantages}>
+        <section className={styles.advantages} id="advantages">
             <div className={"container"}>
                 <Heading heading={heading} attribute="small" />
                 <p className={styles.content}>
