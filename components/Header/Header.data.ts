@@ -12,12 +12,10 @@ const navList: NavItem[] = [
     {
         content: "投放形式",
         route: "/forms",
-        queryString: "?type=0",
     },
     {
         content: "经典案例",
         route: "/examples",
-        queryString: "?type=0",
     },
     {
         content: "合作客户",

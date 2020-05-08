@@ -21,7 +21,9 @@ const MediaCard = ({ card }: MediaCardProps) => {
                 )}
             </ul>
             <Link href={link}>
-                <a className={styles.link}>{linkContent}</a>
+                <a className={styles.link} target="_blank">
+                    {linkContent}
+                </a>
             </Link>
         </div>
     );

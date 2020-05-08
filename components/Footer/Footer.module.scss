@@ -3,6 +3,7 @@
 .footer {
     background: center / cover url("/footer.jpg");
     padding: rem(105) 0 rem(114);
+    position: relative;
     @include respond("large") {
         padding: rem(50) 0 rem(30);
     }
@@ -70,9 +71,11 @@
 }
 
 .phone {
+    flex-shrink: 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
     @media only screen and (max-width: 82.5em) {
         flex-direction: column;
         flex-wrap: unset;
@@ -96,6 +99,7 @@
     }
     @include respond("medium") {
         font-size: rem(16);
+        margin-top: rem(40);
     }
     @include respond("small") {
         text-align: center;

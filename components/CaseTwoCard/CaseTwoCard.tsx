@@ -15,12 +15,13 @@ type CaseOnePartProps = {
         title: string;
         info?: string;
         img: string;
+        img2?: string;
         gallery?: string[];
     };
 };
 
 const CaseOnePart = ({
-    item: { title, info, img, gallery },
+    item: { title, info, img, img2, gallery },
 }: CaseOnePartProps) => {
     return (
         <div className={styles.box}>

@@ -82,7 +82,10 @@
     @include respond("medium") {
         width: 100%;
     }
-
+    @include respond("small") {
+        width: auto;
+        margin: 0 -20px;
+    }
     & > * {
         margin: 0 rem(18) rem(20);
         @media only screen and (max-width: 81.25em) {
@@ -90,6 +93,9 @@
         }
         @include respond("medium") {
             margin: 0 rem(18) rem(20);
+        }
+        @include respond("small") {
+            margin: 0 rem(5) rem(10);
         }
     }
 }

@@ -37,7 +37,7 @@ const Header = () => {
     );
 
     return (
-        <header className={styles.header}>
+        <header className={styles.header} id="top">
             <div className={`${styles.container} container`}>
                 <Link href="/">
                     <a
@@ -78,21 +78,10 @@ const Header = () => {
                                     router.route === route ? styles.active : ""
                                 }
                             >
-                                <Link
-                                    href={
-                                        queryString
-                                            ? `${route}${queryString}`
-                                            : route
-                                    }
-                                >
+                                <Link href={route}>
                                     <a
                                         onClick={(e) =>
-                                            handleLinkClick(
-                                                e,
-                                                queryString
-                                                    ? `${route}${queryString}`
-                                                    : route
-                                            )
+                                            handleLinkClick(e, route)
                                         }
                                     >
                                         {content}

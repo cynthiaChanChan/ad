@@ -39,6 +39,10 @@ const SliderContainer = (
             dotsClass: styles.slickNav,
             adaptiveHeight: true,
             beforeChange(i: number) {
+                const html = document.querySelector("html");
+                if (html) {
+                    html.style.scrollBehavior = "auto";
+                }
                 window.scrollTo(0, containerTop);
             },
             responsive: [

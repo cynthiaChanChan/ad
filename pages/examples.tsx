@@ -13,6 +13,8 @@ const Examples = () => {
     useEffect(() => {
         if (router.query && router.query.type) {
             setNavIndex(+router.query.type);
+        } else if (!router.asPath.includes("type")) {
+            setNavIndex(0);
         }
     }, [router.query]);
     return (

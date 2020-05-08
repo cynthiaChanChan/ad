@@ -11,6 +11,7 @@ export type CaseTwoCardData = {
             text: string;
         }[];
         img: string;
+        img2?: string;
         gallery?: string[];
     }[];
 };

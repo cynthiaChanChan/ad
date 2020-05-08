@@ -7,6 +7,9 @@
     @include respond("extra-small") {
         padding-bottom: rem(60);
     }
+    @include respond("extra-small") {
+        padding: rem(60) 20px rem(20);
+    }
 }
 
 .wrapper {
@@ -25,7 +28,7 @@
         margin-top: rem(50);
     }
     @include respond("extra-small") {
-        margin-top: rem(30);
+        margin-top: rem(20);
     }
 }
 
@@ -34,6 +37,9 @@
     height: rem(290);
     @include center-by-flex;
     flex-direction: column;
+    @include respond("extra-small") {
+        height: rem(190);
+    }
     span {
         transform: translateY(50%);
         @include set-font(rem(35), 700, $color-white, null, 1.75px);

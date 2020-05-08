@@ -9,7 +9,7 @@
         padding: rem(200) 0 rem(100);
     }
     @include respond("extra-small") {
-        padding: rem(160) 0 rem(60);
+        padding: rem(100) 0 rem(40);
     }
     .container {
         display: flex;
@@ -85,22 +85,33 @@
 .list {
     @include set-font(rem(24), null, null, 1.2, rem(4.8));
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 76%;
-    padding: rem(50) 0;
+    padding: rem(45) rem(60);
     background-color: rgba($color-primary, 0.7);
+    @include respond("extra-large") {
+        padding-left: rem(30);
+        padding-right: rem(30);
+    }
+    @include respond("extra-large") {
+        padding-left: rem(10);
+        padding-right: rem(10);
+    }
     @include respond("medium") {
-        padding: rem(26) 0;
+        padding: rem(26) rem(30);
         font-size: rem(16);
         letter-spacing: rem(2);
     }
     @include respond("small") {
         width: 90%;
+        padding-left: rem(10);
+        padding-right: rem(10);
     }
     @include respond("extra-small") {
         padding: rem(16) 0;
-        width: 96%;
+        width: 100%;
     }
+
     & span:first-child {
         @include set-font(rem(64), 700);
         display: block;

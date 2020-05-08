@@ -23,7 +23,9 @@ const Cases = () => {
                             >
                                 <span>{name}</span>
                                 <Link href={link}>
-                                    <a className={styles.link}>{linkName}</a>
+                                    <a className={styles.link} target="_blank">
+                                        {linkName}
+                                    </a>
                                 </Link>
                             </li>
                         )

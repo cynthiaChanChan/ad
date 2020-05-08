@@ -15,6 +15,7 @@
 }
 
 .sub_heading {
+    font-weight: 400;
     font-size: rem(32);
     letter-spacing: rem(6.4);
     @include respond("medium") {
