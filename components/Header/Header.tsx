@@ -6,7 +6,7 @@ import styles from "./Header.module.scss";
 import navList from "./Header.data";
 
 const Header = () => {
-    const route = useRouter().route;
+    const router = useRouter();
     const [isClicked, setIsClicked] = useState(false);
 
     useEffect((): void => {
@@ -20,11 +20,30 @@ const Header = () => {
         setIsClicked(!isClicked);
     }, [isClicked]);
 
+    const handleLinkClick = useCallback(
+        (e, href) => {
+            const body = document.querySelector("body");
+            if (body) {
+                body.className = "";
+            }
+            setIsClicked(false);
+            if (href.includes("section")) {
+                const status = router.query.status === "true";
+                e.preventDefault();
+                router.push(`${href}&status=${!status}`);
+            }
+        },
+        [isClicked]
+    );
+
     return (
         <header className={styles.header}>
             <div className={`${styles.container} container`}>
                 <Link href="/">
-                    <a className={styles.logo}>
+                    <a
+                        className={styles.logo}
+                        onClick={(e) => handleLinkClick(e, "/")}
+                    >
                         <img src="/logo.png" alt="logo" />
                     </a>
                 </Link>
@@ -41,19 +60,43 @@ const Header = () => {
                         isClicked ? styles.open : ""
                     }`}
                 >
-                    <li className={route === "/" ? styles.active : ""}>
+                    <li className={router.route === "/" ? styles.active : ""}>
                         <Link href="/">
-                            <a>首&nbsp;&nbsp;页</a>
+                            <a onClick={(e) => handleLinkClick(e, "/")}>
+                                首&nbsp;&nbsp;页
+                            </a>
                         </Link>
                     </li>
                     {navList.map(
-                        ({ url, content }, idx): React.ReactNode => (
+                        (
+                            { route, queryString, content },
+                            idx
+                        ): React.ReactNode => (
                             <li
                                 key={idx}
-                                className={route === url ? styles.active : ""}
+                                className={
+                                    router.route === route ? styles.active : ""
+                                }
                             >
-                                <Link href={url}>
-                                    <a>{content}</a>
+                                <Link
+                                    href={
+                                        queryString
+                                            ? `${route}${queryString}`
+                                            : route
+                                    }
+                                >
+                                    <a
+                                        onClick={(e) =>
+                                            handleLinkClick(
+                                                e,
+                                                queryString
+                                                    ? `${route}${queryString}`
+                                                    : route
+                                            )
+                                        }
+                                    >
+                                        {content}
+                                    </a>
                                 </Link>
                             </li>
                         )

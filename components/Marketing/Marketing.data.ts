@@ -35,7 +35,7 @@ const marketingListData: MarketingData[] = [
                 text: "附近驾校宣传",
             },
         ],
-        img: "./marketing_broadcast.png",
+        img: "/marketing_broadcast.png",
     },
     {
         heading: {
@@ -56,7 +56,7 @@ const marketingListData: MarketingData[] = [
                 text: "可放置2个X展架、</br>1个3m*3m帐篷1套圆桌椅",
             },
         ],
-        img: "./marketing_live.png",
+        img: "/marketing_live.png",
     },
 ];
 

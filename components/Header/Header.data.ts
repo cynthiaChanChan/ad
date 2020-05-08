@@ -1,28 +1,31 @@
 type NavItem = {
     content: string;
-    url: string;
+    route: string;
+    queryString?: string;
 };
 
 const navList: NavItem[] = [
     {
         content: "服务优势",
-        url: "/#advantages",
+        route: "/?section=advantages",
     },
     {
         content: "投放形式",
-        url: "/forms",
+        route: "/forms",
+        queryString: "?type=0",
     },
     {
         content: "经典案例",
-        url: "/examples",
+        route: "/examples",
+        queryString: "?type=0",
     },
     {
         content: "合作客户",
-        url: "/#customers",
+        route: "/?section=customers",
     },
     {
         content: "联系我们",
-        url: "/#contact",
+        route: "/?section=contact",
     },
 ];
 

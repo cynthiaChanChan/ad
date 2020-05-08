@@ -1,8 +1,6 @@
 @import "../../sass/abstracts/abstracts.scss";
 
 .wrapper {
-    display: inline-block;
-
     &.border {
         padding-left: rem(25);
         position: relative;

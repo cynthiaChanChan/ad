@@ -1,0 +1,101 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.sliderContainer {
+    & > :first-child {
+        display: flex;
+        flex-direction: column;
+
+        .slickNav {
+            background-color: $color-primary;
+            color: $color-white;
+            order: -1;
+            font-size: rem(21);
+            letter-spacing: 2px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            padding: rem(18) 0;
+
+            @include respond("large") {
+                font-size: rem(18);
+            }
+
+            @include respond("medium") {
+                top: 6.25rem;
+                letter-spacing: 1px;
+            }
+
+            @include respond("small") {
+                letter-spacing: unset;
+                font-size: rem(16);
+            }
+
+            li {
+                display: inline-block;
+                position: relative;
+
+                &:not(:last-of-type)::after {
+                    content: "";
+                    width: 1px;
+                    display: block;
+                    height: rem(36);
+                    background: $color-white;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    @include respond("small") {
+                        height: rem(30);
+                    }
+
+                    @include respond("extra-small") {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .link {
+            display: inline-block;
+            padding: rem(15) rem(27);
+            cursor: pointer;
+            margin: 0 rem(20);
+            @include respond("medium") {
+                padding: rem(12) rem(15);
+                margin: 0 rem(15);
+            }
+
+            @include respond("small") {
+                padding: rem(10);
+
+                &.big {
+                    padding: rem(12) rem(15);
+                }
+            }
+            @include respond("extra-small") {
+                margin: 0;
+
+                &.big {
+                    margin: 0 rem(15);
+                }
+            }
+            & span {
+                position: relative;
+            }
+            & span::after {
+                @include underline;
+                margin-top: 5px;
+
+                @include respond("medium") {
+                    display: none;
+                }
+            }
+            &:hover {
+                & span::after {
+                    width: 100%;
+                    left: 0;
+                }
+            }
+        }
+    }
+}

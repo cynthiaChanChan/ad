@@ -10,8 +10,16 @@
         padding: rem(30) 20px;
         max-width: $forms-container;
 
+        @include respond("small") {
+            flex-direction: column;
+        }
+
         & > * {
-            margin: 0 rem(62);
+            margin: 0 rem(45);
+
+            @include respond("medium") {
+                margin: 0 rem(20);
+            }
         }
     }
     &:nth-of-type(odd) {
@@ -20,19 +28,48 @@
         .container {
             flex-direction: row-reverse;
             align-items: center;
+
+            @include respond("small") {
+                flex-direction: column;
+            }
         }
     }
-}
+    .productImg {
+        max-width: rem(493);
+        @include respond("large") {
+            max-width: 40%;
+        }
 
-.productImg {
-    max-width: rem(493);
-    &.small {
-        max-width: rem(227);
-        margin: 0 16rem;
-    }
+        @include respond("small") {
+            order: 1;
+            margin-top: 2rem;
+            max-width: 80%;
+        }
+        &.small {
+            max-width: rem(227);
+            margin: 0 14rem;
 
-    img {
-        width: 100%;
+            @include respond("extra-large") {
+                margin: 0 10rem;
+            }
+
+            @include respond("large") {
+                margin: 0 5rem;
+            }
+
+            @include respond("medium") {
+                margin: 0 2.5rem;
+            }
+
+            @include respond("small") {
+                margin-top: 2rem;
+                max-width: 50%;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
     }
 }
 
@@ -44,9 +81,21 @@
         display: inline-block;
         @include set-font(rem(53), 700, $color-primary);
 
+        @include respond("extra-large") {
+            font-size: rem(40);
+        }
+
+        @include respond("medium") {
+            font-size: rem(30);
+        }
+
         span {
             display: inline-block;
             padding: 0 rem(60);
+
+            @include respond("medium") {
+                padding: 0 rem(40);
+            }
         }
 
         &::after {
@@ -60,5 +109,13 @@
 
     p {
         @include set-font(rem(40), 500, $color-black-2, 1.5);
+
+        @include respond("extra-large") {
+            font-size: rem(30);
+        }
+
+        @include respond("large") {
+            font-size: rem(24);
+        }
     }
 }

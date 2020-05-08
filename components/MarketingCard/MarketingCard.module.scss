@@ -74,7 +74,7 @@
 }
 
 .list {
-    @include set-font(rem(32), $color-black-2, 500);
+    @include set-font(rem(32), 500, $color-black-2);
     @include respond("extra-large") {
         font-size: rem(26);
     }
@@ -87,14 +87,17 @@
         align-items: flex-start;
         & > :first-child {
             display: block;
+            position: relative;
+            padding-left: rem(15);
             &::before {
                 content: "";
-                display: inline-block;
+                position: absolute;
                 background-color: $color-primary;
                 width: 3px;
                 height: 2rem;
-                margin-right: rem(15);
-                transform: translateY(10%);
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
                 @include respond("extra-large") {
                     height: 1.8rem;
                 }
@@ -103,6 +106,7 @@
                 }
             }
         }
+
         .highlight {
             color: $color-primary;
         }

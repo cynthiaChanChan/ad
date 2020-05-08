@@ -64,7 +64,7 @@
     &:nth-of-type(2) {
         .content {
             max-width: rem(330);
-
+            text-align: left;
             @include respond("extra-small") {
                 width: 50%;
             }

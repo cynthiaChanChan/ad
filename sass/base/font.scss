@@ -3,35 +3,59 @@
     font-style: normal;
     font-weight: 300;
     src: local("SourceHanSansCN Normal"),
-        url("/fonts/SourceHanSansCN-Normal.otf") format("opentype");
+        url("/fonts/SourceHanSansCN-Normal.woff") format("woff");
     font-display: "swap";
 }
 
 @font-face {
     font-family: "SourceHanSansCN";
-    font-style: normal;
     font-weight: 400;
-    src: local("SourceHanSansCN Regular"),
-        url("/fonts/SourceHanSansCN-Regular.otf") format("opentype");
-    font-display: "swap";
+    font-display: swap;
+    src: url("//at.alicdn.com/t/webfont_0n9ky0ttqsi.eot"); /* IE9*/
+    src: url("//at.alicdn.com/t/webfont_0n9ky0ttqsi.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */ url("//at.alicdn.com/t/webfont_0n9ky0ttqsi.woff2")
+            format("woff2"),
+        url("//at.alicdn.com/t/webfont_0n9ky0ttqsi.woff") format("woff"),
+        /* chrome、firefox */ url("//at.alicdn.com/t/webfont_0n9ky0ttqsi.ttf")
+            format("truetype"),
+        /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url("//at.alicdn.com/t/webfont_0n9ky0ttqsi.svg#思源黑体-普通")
+            format("svg"); /* iOS 4.1- */
 }
 
 @font-face {
     font-family: "SourceHanSansCN";
-    font-style: normal;
     font-weight: 500;
-    src: local("SourceHanSansCN Medium"),
-        url("/fonts/SourceHanSansCN-Medium.otf") format("opentype");
-    font-display: "swap";
+    font-display: swap;
+    src: url("//at.alicdn.com/t/webfont_p3fq6x1gy9.eot"); /* IE9*/
+    src: url("//at.alicdn.com/t/webfont_p3fq6x1gy9.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */ url("//at.alicdn.com/t/webfont_p3fq6x1gy9.woff2")
+            format("woff2"),
+        url("//at.alicdn.com/t/webfont_p3fq6x1gy9.woff") format("woff"),
+        /* chrome、firefox */ url("//at.alicdn.com/t/webfont_p3fq6x1gy9.ttf")
+            format("truetype"),
+        /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url("//at.alicdn.com/t/webfont_p3fq6x1gy9.svg#思源黑体-粗")
+            format("svg"); /* iOS 4.1- */
 }
 
 @font-face {
     font-family: "SourceHanSansCN";
-    font-style: normal;
     font-weight: 700;
-    src: local("SourceHanSansCN Bold"),
-        url("/fonts/SourceHanSansCN-Bold.otf") format("opentype");
-    font-display: "swap";
+    font-display: swap;
+    src: url("//at.alicdn.com/t/webfont_lwgtf9um2o.eot"); /* IE9*/
+    src: url("//at.alicdn.com/t/webfont_lwgtf9um2o.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */ url("//at.alicdn.com/t/webfont_lwgtf9um2o.woff2")
+            format("woff2"),
+        url("//at.alicdn.com/t/webfont_lwgtf9um2o.woff") format("woff"),
+        /* chrome、firefox */ url("//at.alicdn.com/t/webfont_lwgtf9um2o.ttf")
+            format("truetype"),
+        /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url("//at.alicdn.com/t/webfont_lwgtf9um2o.svg#思源黑体-正粗")
+            format("svg"); /* iOS 4.1- */
 }
 
 @font-face {
@@ -39,6 +63,6 @@
     font-style: normal;
     font-weight: 900;
     src: local("SourceHanSansCN Heavy"),
-        url("/fonts/SourceHanSansCN-Heavy.otf") format("opentype");
+        url("/fonts/SourceHanSansCN-Heavy.woff") format("woff");
     font-display: "swap";
 }

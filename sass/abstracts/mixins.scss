@@ -43,6 +43,7 @@
 }
 
 // animation underline
+// li { position: relative; } // 如果li有padding，可以做一个span，用span or a代替li
 // li::after { @include underline; }
 // li:hover { &::after { width: 100%; left: 0; } }
 @mixin underline {

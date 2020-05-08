@@ -1,0 +1,69 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.banner {
+    padding: rem(114) 30px rem(98);
+    background: center / cover url("/banner_examples.png");
+    text-align: center;
+}
+
+.heading_box {
+    padding: rem(37) rem(93) rem(46);
+    margin: 0 auto;
+    background-color: rgba($color-primary, 0.6);
+    color: $color-white;
+    display: inline-block;
+    @media only screen and (max-width: 64em) {
+        padding: rem(37) rem(53) rem(46);
+    }
+    @include respond("medium") {
+        padding: rem(30) rem(43) rem(40);
+    }
+    @include respond("extra-small") {
+        padding: rem(20) rem(33) rem(30);
+    }
+}
+
+.sub_heading {
+    padding-left: rem(18);
+    @include set-font(rem(32), 700, null, 1, rem(18));
+    @include respond("medium") {
+        font-size: rem(24);
+        letter-spacing: rem(6);
+        padding-left: rem(6);
+    }
+    @include respond("extra-small") {
+        font-size: rem(20);
+    }
+}
+
+.line {
+    display: inline-block;
+    height: 1px;
+    width: 35%;
+    background-color: currentColor;
+    margin: rem(10) 0 rem(20);
+    @include respond("extra-small") {
+        margin: rem(10) 0 rem(14);
+    }
+}
+
+.heading {
+    padding-left: rem(13);
+    @include set-font(rem(64), 900, null, 1, rem(12.8));
+    @media only screen and (max-width: 64em) {
+        font-size: rem(46);
+    }
+    @include respond("medium") {
+        font-size: rem(36);
+        letter-spacing: rem(5);
+        padding-left: rem(5);
+    }
+    @include respond("extra-small") {
+        font-size: rem(30);
+        letter-spacing: 2px;
+    }
+    span {
+        display: inline-block;
+        transform: translateY(-10%);
+    }
+}

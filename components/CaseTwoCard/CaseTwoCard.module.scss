@@ -1,0 +1,177 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.caseCard {
+    padding-bottom: rem(30);
+
+    &:first-of-type {
+        .box > .container {
+            flex-direction: column;
+            align-items: center;
+
+            .productImg {
+                width: 100%;
+                padding: 0 rem(45);
+                margin-bottom: rem(32);
+
+                @include respond("large") {
+                    padding: 0 rem(30);
+                }
+
+                @include respond("medium") {
+                    padding: 0 20px;
+                    margin-bottom: 0;
+                }
+            }
+
+            .content {
+                width: 100%;
+                padding: 0 rem(45);
+
+                @include respond("large") {
+                    padding: 0 rem(30);
+                }
+
+                @include respond("medium") {
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
+
+    &:last-of-type {
+        & > .container:first-child {
+            margin-bottom: rem(52);
+
+            @include respond("medium") {
+                margin-bottom: rem(76);
+            }
+        }
+        .box:nth-of-type(even) > .container {
+            flex-direction: row-reverse;
+
+            @include respond("medium") {
+                flex-direction: column;
+            }
+        }
+        .content {
+            width: 43%;
+
+            @include respond("medium") {
+                width: 55%;
+            }
+
+            @include respond("small") {
+                width: 90%;
+            }
+        }
+        .subHeading {
+            padding-left: 0;
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                background-color: currentColor;
+                height: rem(4);
+                width: 84%;
+                margin-top: rem(8);
+            }
+        }
+    }
+}
+
+.parts {
+    margin-top: rem(66);
+    @include respond("medium") {
+        order: -1;
+    }
+}
+
+.box {
+    background-color: $color-white;
+    margin-bottom: rem(45);
+    @include respond("medium") {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .gallery {
+        margin-bottom: rem(14);
+        padding-top: 0;
+
+        @include respond("medium") {
+            order: 2;
+        }
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0 20px;
+
+        @include respond("medium") {
+            padding: 0;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        & > * {
+            margin: 0 rem(45);
+
+            @include respond("large") {
+                margin: 0 rem(30);
+            }
+
+            @include respond("medium") {
+                margin: 0 20px;
+            }
+        }
+    }
+
+    .productImg {
+        @include respond("medium") {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            order: 2;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.content {
+    flex-shrink: 0;
+    width: 32%;
+
+    @include respond("large") {
+        width: 45%;
+    }
+
+    @include respond("medium") {
+        width: 55%;
+    }
+
+    @include respond("small") {
+        width: 90%;
+    }
+
+    p {
+        @include set-font(rem(24), $color-black-2);
+        line-height: 1.67;
+
+        @media only screen and (max-width: 81.25em) {
+            font-size: rem(20);
+        }
+
+        @include respond("large") {
+            font-size: rem(18);
+        }
+    }
+}
+
+.subHeading {
+    margin-bottom: rem(15);
+}

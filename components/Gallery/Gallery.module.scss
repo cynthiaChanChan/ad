@@ -1,0 +1,38 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.gallery {
+    padding-top: rem(14);
+
+    @include respond("medium") {
+        padding-top: 0;
+        margin-top: -1.5rem;
+    }
+    .container {
+        display: flex;
+        padding: 0 rem(58);
+        @include respond("large") {
+            padding: 0 rem(45);
+        }
+
+        @include respond("medium") {
+            padding: 0 17px;
+        }
+
+        @include respond("small") {
+            padding: 0 19px;
+        }
+    }
+}
+
+.imgContainer {
+    margin: 0 rem(7);
+    @include respond("medium") {
+        margin: 0 3px;
+    }
+    @include respond("small") {
+        margin: 0 1px;
+    }
+    img {
+        width: 100%;
+    }
+}

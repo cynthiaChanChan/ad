@@ -1,0 +1,120 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.caseCard {
+    &:nth-of-type(even) {
+        padding: rem(97) 0 rem(23);
+
+        @include respond("medium") {
+            padding: 1.75rem 0 0;
+        }
+    }
+
+    &:nth-of-type(even) .box > .container {
+        flex-direction: row-reverse;
+
+        @include respond("medium") {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}
+
+.parts {
+    margin-top: rem(66);
+}
+
+.box {
+    background-color: $color-white;
+
+    padding-bottom: rem(21);
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0 20px;
+
+        @include respond("medium") {
+            padding: 0;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        & > * {
+            margin: 0 rem(45);
+
+            @include respond("large") {
+                margin: 0 rem(30);
+            }
+
+            @include respond("medium") {
+                margin: 0 20px;
+            }
+        }
+    }
+
+    .productImg {
+        @include respond("medium") {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.content {
+    flex-shrink: 0;
+    width: 38%;
+
+    @include respond("large") {
+        width: 45%;
+    }
+
+    @include respond("medium") {
+        width: 55%;
+    }
+
+    @include respond("small") {
+        width: 90%;
+    }
+
+    p {
+        @include set-font(rem(24), null, $color-black-2);
+        line-height: 1.67;
+
+        @media only screen and (max-width: 81.25em) {
+            font-size: rem(20);
+        }
+
+        @include respond("large") {
+            font-size: rem(18);
+        }
+    }
+}
+
+.list {
+    @include set-font(rem(24), null, $color-black-2, 1.8, 2px);
+
+    @media only screen and (max-width: 81.25em) {
+        font-size: rem(20);
+    }
+
+    @include respond("large") {
+        font-size: rem(18);
+    }
+
+    li {
+        display: flex;
+        flex-wrap: wrap;
+
+        .highlight {
+            color: $color-primary;
+        }
+    }
+}
+
+.subHeading {
+    margin-bottom: rem(15);
+}

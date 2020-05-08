@@ -12,18 +12,38 @@
     .container {
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
         padding: rem(110) 20px rem(97);
         max-width: $forms-container;
 
+        @include respond("small") {
+            padding: rem(60) 0;
+        }
+
         & > * {
-            margin: 0 rem(55);
+            margin: 0 rem(45);
+
+            @include respond("medium") {
+                margin: 0 20px;
+            }
+
+            @include respond("extra-small") {
+                margin: 0 10px;
+            }
         }
     }
 }
 
 .productImg {
     max-width: rem(435);
+
+    @include respond("medium") {
+        max-width: rem(335);
+
+        @include respond("small") {
+            max-width: rem(235);
+        }
+    }
     img {
         width: 100%;
     }
@@ -32,20 +52,38 @@
 .wifiInfo {
     max-width: rem(582);
     @include set-font(rem(32), 500, $color-black-2);
+    @include respond("extra-large") {
+        font-size: rem(26);
+    }
+    @include respond("large") {
+        font-size: rem(21);
+    }
+
+    @include respond("small") {
+        font-size: rem(16);
+    }
     li {
         display: flex;
-
+        margin-top: rem(10);
         :first-child {
             flex-shrink: 0;
-        }
-
-        :nth-child(2) {
-            padding-top: rem(5);
         }
     }
     .highlight {
         color: $color-primary;
         font-size: rem(40);
+
+        @include respond("extra-large") {
+            font-size: rem(30);
+        }
+
+        @include respond("extra-large") {
+            font-size: rem(24);
+        }
+
+        @include respond("small") {
+            font-size: rem(18);
+        }
     }
 
     .newLine {

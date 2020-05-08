@@ -1,0 +1,129 @@
+@import "../../sass/abstracts/abstracts.scss";
+
+.caseCard {
+    &:nth-of-type(even) {
+        padding: rem(67) 0 rem(29);
+
+        @include respond("medium") {
+            padding: rem(67) 0 0;
+        }
+    }
+
+    &:last-of-type {
+        .productImg {
+            margin-right: rem(22);
+        }
+        .content {
+            margin-left: 0;
+            width: 43%;
+
+            @include respond("medium") {
+                padding: 0 20px;
+                width: 55%;
+            }
+
+            @include respond("small") {
+                width: 90%;
+            }
+
+            p {
+                font-weight: (500);
+            }
+        }
+        .subHeading {
+            padding-left: 0;
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                background-color: currentColor;
+                height: rem(9);
+                width: 84%;
+                margin-top: rem(8);
+            }
+        }
+    }
+}
+
+.parts {
+    margin-top: rem(66);
+}
+
+.box {
+    background-color: $color-white;
+
+    padding-bottom: rem(15);
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0 20px;
+
+        @include respond("medium") {
+            padding: 0;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        & > * {
+            margin: 0 rem(45);
+
+            @include respond("large") {
+                margin: 0 rem(30);
+            }
+
+            @include respond("medium") {
+                margin: 0 20px;
+            }
+        }
+    }
+
+    .productImg {
+        @include respond("medium") {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            order: 2;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.content {
+    flex-shrink: 0;
+    width: 32%;
+
+    @include respond("large") {
+        width: 45%;
+    }
+
+    @include respond("medium") {
+        width: 55%;
+    }
+
+    @include respond("small") {
+        width: 90%;
+    }
+
+    p {
+        @include set-font(rem(24), null, $color-black-2);
+        line-height: 1.67;
+
+        @media only screen and (max-width: 81.25em) {
+            font-size: rem(20);
+        }
+
+        @include respond("large") {
+            font-size: rem(18);
+        }
+    }
+}
+
+.subHeading {
+    margin-bottom: rem(15);
+}

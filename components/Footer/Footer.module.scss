@@ -31,9 +31,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: rem(360);
+    max-width: rem(378);
     text-align: center;
-    margin: 0 rem(28);
+    margin: 0 rem(25);
     @media only screen and (max-width: 64em) {
         margin: 0 rem(16);
     }
@@ -75,6 +75,7 @@
     flex-wrap: wrap;
     @media only screen and (max-width: 82.5em) {
         flex-direction: column;
+        flex-wrap: unset;
     }
 }
 
@@ -106,5 +107,6 @@
     margin-right: rem(46);
     @include respond("small") {
         display: block;
+        margin-right: 0;
     }
 }

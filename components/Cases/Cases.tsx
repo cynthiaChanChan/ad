@@ -9,7 +9,7 @@ const Cases = () => {
     const { caseList, imgList } = casesData;
     return (
         <section className={styles.cases}>
-            <Heading heading={heading} attribute="smalll" />
+            <Heading heading={heading} attribute="small" />
             <div className={styles.wrapper}>
                 <ul className={styles.case_list}>
                     {caseList.map(
