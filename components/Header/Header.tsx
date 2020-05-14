@@ -1,14 +1,15 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useContext } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 import styles from "./Header.module.scss";
 import navList from "./Header.data";
+import { AppContext } from "../../providers/app.provider";
 
 const Header = () => {
     const router = useRouter();
     const [isClicked, setIsClicked] = useState(false);
-
+    const { setSubPageTitle } = useContext(AppContext);
     useEffect((): void => {
         const body = document.querySelector("body");
         if (body) {
@@ -21,19 +22,20 @@ const Header = () => {
     }, [isClicked]);
 
     const handleLinkClick = useCallback(
-        (e, href) => {
+        (e, href, title?: string) => {
             const body = document.querySelector("body");
             if (body) {
                 body.className = "";
             }
             setIsClicked(false);
-            if (href.includes("section")) {
-                const status = router.query.status === "true";
-                e.preventDefault();
-                router.push(`${href}&status=${!status}`);
+            if (href.indexOf("#contact") > -1) {
+                const titleElem = document.querySelector("title");
+                if (titleElem && titleElem.textContent) {
+                    setSubPageTitle(title || "");
+                }
             }
         },
-        [isClicked]
+        [isClicked, router.query.section]
     );
 
     return (
@@ -68,10 +70,7 @@ const Header = () => {
                         </Link>
                     </li>
                     {navList.map(
-                        (
-                            { route, queryString, content },
-                            idx
-                        ): React.ReactNode => (
+                        ({ route, content, title }, idx): React.ReactNode => (
                             <li
                                 key={idx}
                                 className={
@@ -81,7 +80,7 @@ const Header = () => {
                                 <Link href={route}>
                                     <a
                                         onClick={(e) =>
-                                            handleLinkClick(e, route)
+                                            handleLinkClick(e, route, title)
                                         }
                                     >
                                         {content}

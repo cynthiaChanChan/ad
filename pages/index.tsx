@@ -7,8 +7,12 @@ import Advantages from "../components/Advantages/Advantages";
 import Media from "../components/Media/Media";
 import Cases from "../components/Cases/Cases";
 import Customers from "../components/Customers/Customers";
+import { useContext, useEffect } from "react";
+import { AppContext } from "../providers/app.provider";
+import { useRouter } from "next/router";
 
-const Products = () => {
+const Home = () => {
+    const { title } = useContext(AppContext);
     return (
         <>
             <Head>
@@ -20,7 +24,7 @@ const Products = () => {
                     name="keyword"
                     content="驾悦传媒，驾校媒体，驾校传媒，驾校媒介，驾校活动，试乘试驾，试驾体验，汽车媒体，驾校广告，主题驾校，汽车销售渠道，驾校落地体验，驾校大牌，落地活动，物料公司，制作安装，汽车品牌，驾校广告宣传，购车，驾校市场"
                 />
-                <title>驾悦传媒-首页</title>
+                <title>{title}</title>
             </Head>
             <Layout>
                 <Banner />
@@ -34,4 +38,4 @@ const Products = () => {
     );
 };
 
-export default Products;
+export default Home;

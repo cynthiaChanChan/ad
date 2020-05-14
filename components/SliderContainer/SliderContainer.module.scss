@@ -1,6 +1,8 @@
 @import "../../sass/abstracts/abstracts.scss";
 
 .sliderContainer {
+    position: relative;
+    z-index: 1;
     & > :first-child {
         display: flex;
         flex-direction: column;

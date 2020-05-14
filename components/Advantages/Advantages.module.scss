@@ -4,6 +4,10 @@
     padding: rem(50) 0 rem(30);
     text-align: center;
     color: $color-grey-2;
+    //Offsetting anchor hash tag links to adjust for fixed header
+    position: relative;
+    margin-top: -80px;
+    z-index: -1;
 }
 
 .content {

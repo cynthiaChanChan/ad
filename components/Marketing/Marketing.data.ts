@@ -53,7 +53,7 @@ const marketingListData: MarketingData[] = [
             },
             {
                 title: "洽谈区：",
-                text: "可放置2个X展架、</br>1个3m*3m帐篷1套圆桌椅",
+                text: "可放置2个X展架、</br>1个3m*3m帐篷、1套圆桌椅",
             },
         ],
         img: "/marketing_live.png",

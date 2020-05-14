@@ -5,6 +5,10 @@
     padding: rem(300) 0 rem(100);
     background: bottom / cover url("/banner.jpg");
     color: $color-white;
+    @media only screen and (max-width: 90em) {
+        padding-top: rem(180);
+    }
+
     @include respond("large") {
         padding: rem(200) 0 rem(100);
     }
@@ -112,9 +116,8 @@
         width: 100%;
     }
 
-    & span:first-child {
+    & span {
         @include set-font(rem(64), 700);
-        display: block;
         letter-spacing: 0;
         @include respond("extra-large") {
             font-size: rem(54);

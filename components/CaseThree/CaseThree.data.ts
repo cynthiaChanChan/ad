@@ -36,10 +36,10 @@ const caseThreeData: CaseThreeCardData[] = [
                     },
                     {
                         title: "对象：",
-                        text: "近期毕业学员/教练/在学学员产品",
+                        text: "近期毕业学员/教练/在学学员",
                     },
                     {
-                        title: "价值呈现方式：",
+                        title: "产品价值呈现方式：",
                         text: "动态试驾试乘+静态体验+物料辅助",
                     },
                 ],

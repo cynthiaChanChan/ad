@@ -1,13 +1,14 @@
 type NavItem = {
     content: string;
     route: string;
-    queryString?: string;
+    title?: string;
 };
 
 const navList: NavItem[] = [
     {
         content: "服务优势",
-        route: "/?section=advantages",
+        title: "驾悦传媒-服务优势-汽车广告驾校宣传",
+        route: "/?section=advantages#advantages",
     },
     {
         content: "投放形式",
@@ -19,11 +20,13 @@ const navList: NavItem[] = [
     },
     {
         content: "合作客户",
-        route: "/?section=customers",
+        title: "驾悦传媒-合作客户-服务品牌车企",
+        route: "/?section=customers#customers",
     },
     {
         content: "联系我们",
-        route: "/?section=contact",
+        title: "驾悦传媒-联系我们-驾校落地活动",
+        route: "?section=contact#contact",
     },
 ];
 

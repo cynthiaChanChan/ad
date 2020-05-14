@@ -9,25 +9,19 @@ const Advantages = () => {
     const heading = { title: "服务优势", subTitle: "Service advantages" };
     const ele = useRef<null | HTMLElement>(null);
     const router = useRouter();
-    useEffect(() => {
-        if (router.query.section === "advantages" && ele && ele.current) {
-            const offsetTop = ele.current.offsetTop;
-            window.scrollTo({
-                top: offsetTop - 80,
-                left: 0,
-                behavior: "smooth",
-            });
-        }
-    }, [router.query.section, router.query.status]);
+
     return (
-        <section className={styles.advantages} id="advantages" ref={ele}>
+        <section
+            className={`${styles.advantages} offset`}
+            id="advantages"
+            ref={ele}
+        >
             <div className={"container"}>
                 <Heading heading={heading} attribute="small" />
                 <p className={styles.content}>
-                    通过驾校媒介，服务品牌车企，深入购车群体
+                    通过驾校媒介&nbsp;服务品牌车企&nbsp;深入购车群体
                     <br />
-                    我们提供：广告宣传 &amp; 品牌传播、互联网O2O &amp;
-                    大数据精准营销、活动策划 &amp; 落地执行
+                    服务：广告宣传&nbsp;品牌传播&nbsp;互联网O2O&nbsp;大数据精准营销&nbsp;活动策划&nbsp;活动执行
                 </p>
                 <ul className={styles.list}>
                     {advantageList.map(

@@ -1,14 +1,19 @@
 @import "../../sass/abstracts/abstracts.scss";
-
 .footer {
+    //Offsetting anchor hash tag links to adjust for fixed header
+    margin-top: -80px;
+}
+
+.footerContainer {
     background: center / cover url("/footer.jpg");
-    padding: rem(105) 0 rem(114);
-    position: relative;
-    @include respond("large") {
-        padding: rem(50) 0 rem(30);
-    }
+    padding: rem(30) 0;
+
     a:hover {
         color: $color-primary;
+    }
+
+    .content.animation img {
+        animation: moveInDown 1s both;
     }
 }
 
@@ -46,11 +51,15 @@
             order: 1;
         }
     }
+
+    @include respond("small") {
+        margin-bottom: rem(10);
+    }
 }
 
 .icon {
     width: rem(60);
-    margin-bottom: rem(8);
+    margin-bottom: rem(12);
     height: rem(57);
     display: flex;
     align-items: flex-end;
@@ -65,6 +74,7 @@
 
 .icon_marker {
     width: rem(40);
+
     @include respond("large") {
         width: rem(30);
     }
@@ -80,6 +90,10 @@
         flex-direction: column;
         flex-wrap: unset;
     }
+    @include respond("small") {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 .links {
@@ -87,11 +101,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @include respond(small) {
+        max-width: 100%;
+        & > * {
+            margin: 0 5px;
+        }
+    }
 }
 
 .copyright {
     color: $color-white;
-    margin-top: rem(113);
+    margin-top: rem(80);
     font-size: 16px;
     text-align: center;
     @include respond("large") {

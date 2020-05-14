@@ -1,10 +1,12 @@
 @import "../../sass/abstracts/abstracts.scss";
 
 .cases {
+    position: relative;
+    z-index: 2;
     text-align: center;
-    background: center / cover url("/background_case.png");
+    background: $color-white center / cover url("/background_case.png");
     padding: rem(60) 20px rem(114);
-    @include respond("extra-small") {
+    @include respond("medium") {
         padding-bottom: rem(60);
     }
     @include respond("extra-small") {

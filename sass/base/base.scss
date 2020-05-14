@@ -8,7 +8,6 @@
 
 html {
     font-size: 100%;
-    scroll-behavior: smooth;
     @include respond("extra-large") {
         font-size: 90%;
     }
@@ -104,5 +103,19 @@ textarea:focus {
         color: $color-primary;
         background-color: $color-white;
         border-radius: rem(120);
+    }
+}
+
+//Offsetting anchor hash tag links to adjust for fixed header
+.offset::before {
+    display: block;
+    content: " ";
+    height: 80px;
+    visibility: hidden;
+}
+
+.main {
+    @include respond("medium") {
+        margin-top: 80px;
     }
 }

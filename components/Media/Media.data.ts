@@ -23,21 +23,21 @@ const mediaData: MeadiaList = [
     },
     {
         title: "02",
-        subTitle: "Wi-Fi 页面广告",
+        subTitle: "落地营销活动",
         list: [
-            "学车等待期，处在无聊和封闭的环境中，对手机网络的需求更为旺盛",
-            "据调查，99.7%的学员都希望驾校内能提供免费的Wi-Fi服务",
+            "活动前提前预热和宣传",
+            "活动现场加强互动，提高品牌认知，增强宣传和集客效果",
+            "活动后留资数据持续追踪，效果总结反馈",
         ],
         link: "/forms?type=1#content",
         linkContent: "Read More",
     },
     {
         title: "03",
-        subTitle: "落地营销活动",
+        subTitle: "Wi-Fi 页面广告",
         list: [
-            "活动前提前预热和宣传",
-            "活动现场加强互动，提高品牌认知，增强宣传和集客效果",
-            "活动后留资数据持续追踪，效果总结反馈",
+            "学车等待期，处在无聊和封闭的环境中，对手机网络的需求更为旺盛",
+            "据调查，99.7%的学员都希望驾校内能提供免费的Wi-Fi服务",
         ],
         link: "/forms?type=2#content",
         linkContent: "Read More",

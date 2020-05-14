@@ -4,6 +4,10 @@
     padding: rem(52) 0 rem(65);
     background-color: $color-grey-3;
     text-align: center;
+    //Offsetting anchor hash tag links to adjust for fixed header
+    position: relative;
+    margin-top: -80px;
+    z-index: 1;
 }
 
 .list {

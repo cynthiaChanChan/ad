@@ -20,6 +20,16 @@
     img {
         display: block;
         width: 100%;
+
+        &.animation {
+            animation: slideInRight 1s forwards;
+            visibility: hidden;
+
+            @include respond("large") {
+                animation: none;
+                visibility: visible;
+            }
+        }
     }
 }
 

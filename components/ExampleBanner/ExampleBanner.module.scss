@@ -12,6 +12,7 @@
     background-color: rgba($color-primary, 0.6);
     color: $color-white;
     display: inline-block;
+    animation: popup 1s ease-in;
     @media only screen and (max-width: 64em) {
         padding: rem(37) rem(53) rem(46);
     }
